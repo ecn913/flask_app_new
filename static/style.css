@@ -1,4 +1,9 @@
 body{
-    background-image: url("images/Santa Fe Stucco.bmp");
+    background-image: url("images/Santa_Fe_Stucco.bmp");
     background-image: repeat;
+    color: aliceblue;
+    text-shadow: 2px 2px #000000;
+}
+.whitetext{
+    color: rgb(135, 196, 248);
 }

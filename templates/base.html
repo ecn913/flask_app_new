@@ -8,9 +8,9 @@
 </head>
 <body>
     <nav>
-        <h3><a href="{{ url_for('index')}}">Home</a></h3>
-        <h3><a href="{{ url_for('page2')}}">My Second Page</a></h3>
-        <h3><a href="{{ url_for('page3')}}">My Third Page</a></h3>
+        <h3><a class="whitetext" href="{{ url_for('my_view.index')}}">Home</a></h3>
+        <h3><a class="whitetext" href="{{ url_for('my_view.page2')}}">My Second Page</a></h3>
+        <h3><a class="whitetext" href="{{ url_for('my_view.page3')}}">My Third Page</a></h3>
     </nav>
 
     {% block content %}

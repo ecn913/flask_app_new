@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask
+from views import my_view
 
 app = Flask(__name__)
 app.register_blueprint(my_view)
