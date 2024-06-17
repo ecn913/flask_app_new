@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iste temporibus possimus suscipit sunt architecto rerum minus ea explicabo corporis consequatur hic blanditiis provident atque accusantium magni, tempora et porro maiores placeat dolorum exercitationem facilis. Delectus iste dolor doloribus omnis quam consectetur ex ipsa, ut quisquam vitae quos minus, corrupti harum, illum perspiciatis. Cumque asperiores odit dolores alias explicabo, aliquam nobis fuga dolorem nulla perspiciatis eveniet cupiditate amet optio quae beatae veritatis suscipit animi quas nemo! Repellat illum dolorum totam quos cumque labore nam et hic, ratione ullam officia, natus minus sint, ducimus aspernatur ea ab veritatis alias voluptates? Placeat veniam, doloremque repellat fuga provident dicta aliquam, necessitatibus excepturi, animi tenetur quisquam beatae eos! Quam nesciunt voluptatum neque veniam voluptatem dolores, esse est doloremque. Amet ducimus reprehenderit sed aspernatur ipsum iusto, omnis, non tenetur temporibus eius aperiam numquam repellendus eligendi? Non porro aspernatur quibusdam vitae consequatur ullam dolorem velit quas ex tenetur numquam facere facilis veritatis voluptate, similique debitis impedit necessitatibus! Ipsa quod aliquam adipisci eius sunt tempore modi. Ipsum dolores nobis inventore, quibusdam numquam ea laboriosam modi quidem deleniti voluptatem, eos impedit et repellendus minima accusamus eveniet veritatis? Laudantium, aspernatur! Sequi natus distinctio maiores corporis quo perferendis, deserunt doloremque.</p>
-
-{% endblock %}
+    <p>My favourite bands are</p>
+    <ol>
+    {% for band in fave_bands %}
+    <li>{{ band }} is cool</li>
+    {% endfor %}
+    </ol>
+    <br>
+    {% endblock %}
