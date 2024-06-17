@@ -1,15 +1,20 @@
-from flask import Flask, render_template, Blueprint
-from bands import fave_bands
+from flask import Flask, render_template, Blueprint, request
+from bands import BandEntry
 
 my_view = Blueprint("my_view", __name__)
+
+band_objects = []
 
 @my_view.route("/")
 def index():
     return render_template("index.html")
 
-@my_view.route("/page2")
+@my_view.route("/page2", methods=["GET", "POST"])
 def page2():
-    return render_template("page2.html", fave_bands = fave_bands)
+    if request.method == "POST":
+        new_band = BandEntry(request.form["added_band"], request.form["added_song"], request.form["added_album"], request.form["added_rate"])
+        band_objects.append(new_band)
+    return render_template("page2.html", band_objects = band_objects)
 
 @my_view.route("/page3")
 def page3():

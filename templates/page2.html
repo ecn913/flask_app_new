@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>My favourite bands are</p>
+    <p>My Favourites</p>
     <ol>
-    {% for band in fave_bands %}
-    <li>{{ band }} is cool</li>
+    {% for band in band_objects %}
+    <li>{{ band.band }}, {{ band.song }}, {{ band.album }}, {{ band.rate }}</li>
     {% endfor %}
     </ol>
     <br>
+    <form action = "/page2" method = "post">
+        <input type="text" id="addband" name="added_band" placeholder="Enter a Band name!">  
+        <input type="text" id="addsong" name="added_song" placeholder="Enter a song by them!">
+        <input type="text" id="addalbum" name="added_album" placeholder="What album is it on?">
+        <input type="text" id="addrate" name="added_rate" placeholder="Rate it out of 5!">
+        <input type="submit" value="Submit">
+    </form>
     {% endblock %}
