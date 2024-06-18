@@ -4,7 +4,10 @@
     <p>My Favourites</p>
     <ol>
     {% for band in band_objects %}
-    <li>{{ band.band }}, {{ band.song }}, {{ band.album }}, {{ band.rate }}</li>
+    <li>{{ band.band }}, {{ band.song }}, {{ band.album }}, {{ band.rate }}
+        {% for i in range(band.rate) %}
+        <span class="fa fa-star checked"></span>
+        {% endfor %}</li>
     {% endfor %}
     </ol>
     <br>
@@ -12,7 +15,14 @@
         <input type="text" id="addband" name="added_band" placeholder="Enter a Band name!">  
         <input type="text" id="addsong" name="added_song" placeholder="Enter a song by them!">
         <input type="text" id="addalbum" name="added_album" placeholder="What album is it on?">
-        <input type="text" id="addrate" name="added_rate" placeholder="Rate it out of 5!">
+        <!-- <input type="text" id="addrate" name="added_rate" placeholder="Rate it out of 5!"> -->
+        <select name="added_rate" id="banddrop">
+            <option value="5">5 *****</option>
+            <option value="4">4 ****</option>
+            <option value="3">3 ***</option>
+            <option value="2">2 **</option>
+            <option value="1">1 *</option>
+        </select> 
         <input type="submit" value="Submit">
     </form>
-    {% endblock %}
+{% endblock %}

@@ -12,7 +12,10 @@ def index():
 @my_view.route("/page2", methods=["GET", "POST"])
 def page2():
     if request.method == "POST":
-        new_band = BandEntry(request.form["added_band"], request.form["added_song"], request.form["added_album"], request.form["added_rate"])
+        new_band = BandEntry(request.form["added_band"], 
+        request.form["added_song"], 
+        request.form["added_album"], 
+        int(request.form["added_rate"]))
         band_objects.append(new_band)
     return render_template("page2.html", band_objects = band_objects)
 

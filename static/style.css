@@ -7,3 +7,6 @@ body{
 .whitetext{
     color: rgb(135, 196, 248);
 }
+.checked {
+    color: orange;
+}
